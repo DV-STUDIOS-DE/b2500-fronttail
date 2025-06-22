@@ -1,11 +1,11 @@
 # b2500-fronttail für openhab
 
 
-Erstellt ein Logfile in /tmp für die Debugausgabe des B2500 ESP
-Das Debugfile wird dann über das Fronttail auf http://[adresse von openhab]:9002 angezeigt
+Erstellt ein Logfile in /tmp für die Debugausgabe des B2500 ESP  
+Das Debugfile wird dann über das Fronttail auf http://[adresse von openhab]:9002 angezeigt  
 
-1. Die Datei events.sh in das Homeverzeichnis\B2500 kopieren.
-Als service ausführen:
+1. Die Datei events.sh in das Homeverzeichnis\B2500 kopieren.  
+Als service ausführen:  
 ```
 sudo nano /etc/systemd/system/frontail-B2500.service
 ```
@@ -24,35 +24,35 @@ RestartSec=5
 [Install]
 WantedBy=multi-user.target
 ```
-Service neu laden und starten
+Service neu laden und starten  
 ```
 sudo systemctl daemon-reload
 sudo systemctl start events.service
 sudo systemctl enable frontail-B2500.service
 ```
-Check mit:
+Check mit:  
 ```
 openhabian@openhabian:~ $ ls /tmp/b2500debug.log
 /tmp/b2500debug.log
 ```
 
-2. frontail auf Port 9002 einrichten
-Damit der Inhalt der /tmp/b2500debug.log im Frontatil sichtbar wird, zuerst den Pfad von Fronttail ermitteln, sollte etwa so aussehen
+2. frontail auf Port 9002 einrichten  
+Damit der Inhalt der /tmp/b2500debug.log im Frontatil sichtbar wird, zuerst den Pfad von Fronttail ermitteln, sollte etwa so aussehen  
 ```
 openhabian@openhabian:~ $ which frontail
 /usr/local/bin/frontail
 ```
-Ist Frontail nicht vefügbar folgendes ausführen
+Ist Frontail nicht vefügbar folgendes ausführen  
 ```
 sudo apt update
 sudo apt install -y nodejs npm
 ```
-Check Node.js Version:
+Check Node.js Version:  
 ```
 node -v
 npm -v
 ```
-Falls node veraltet ist, kannst du Node.js von Nodesource installieren (optional):
+Falls node veraltet ist, kannst du Node.js von Nodesource installieren (optional):  
 ```
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt install -y nodejs
@@ -116,7 +116,7 @@ Inhalt hinzufügen
 */5 * * * * /usr/sbin/logrotate --state /home/openhabian/B2500/logrotate.state /home/openhabian/B2500/b2500debug-logrotate.conf
 ```
 
-Nun wird die Datei /tmp/b2500debug.log nach 75MB gekappt.
-Es werden dabei maximal 5 alte Dateien gespeichert (rotate = 5)
-
+Nun wird die Datei /tmp/b2500debug.log nach 75MB gekappt.  
+Es werden dabei maximal 5 alte Dateien gespeichert (rotate = 5)  
+  
 So, das wars schon, viel Spass damit!!!
