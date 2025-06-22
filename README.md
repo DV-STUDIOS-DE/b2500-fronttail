@@ -4,8 +4,8 @@
 Erstellt ein Logfile in /tmp für die Debugausgabe des B2500 ESP  
 Das Debugfile wird dann über das Fronttail auf http://[adresse von openhab]:9002 angezeigt  
 
-1. Die Datei events.sh nach /home/openhabian/B2500/events.sh kopieren und auf ausführbar setzen (chmod 775 events.sh)
-Als service ausführen:  
+1. Die Datei events.sh nach /home/openhabian/B2500/events.sh kopieren und auf ausführbar setzen (chmod 775 events.sh)  
+events.sh ls service ausführen:  
 ```
 sudo nano /etc/systemd/system/frontail-B2500.service
 ```
