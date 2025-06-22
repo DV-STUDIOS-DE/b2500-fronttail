@@ -70,7 +70,7 @@ Alles ok, dann weiter
 ```
 sudo nano /etc/systemd/system/frontail-b2500.service
 ```
-Inhalt, den Pfad für ExecStart= "/usr/bin/frontail" anpassen (siehe oben which frontatil)
+Inhalt, den Pfad für ExecStart= "/usr/bin/frontail" anpassen (siehe oben which frontail)
 ```
 [Unit]
 Description=Frontail service for b2500debug.log
