@@ -1,8 +1,5 @@
 # b2500-fronttail für openhab
 
-https://github.com/DV-STUDIOS-DE/b2500-fronttail/blob/main/2025-06-22_04h01_06.png
-
-
 Erstellt ein Logfile in /tmp für die Debugausgabe des ESPHome B2500  
 Das Debugfile wird dann über das Fronttail auf http://[adresse von openhab]:9002 angezeigt.
 Unter Advanced auf https://tomquist.github.io/esphome-b2500/ vor dem Bulid den loglevel auf Debug setzen um alle Log-Ausgaben des ESP zu erhalten.
@@ -125,3 +122,6 @@ Nun wird die Datei /tmp/b2500debug.log nach 75MB gekappt.
 Es werden dabei maximal 5 alte Dateien gespeichert (rotate = 5)  
   
 So, das wars schon, viel Spass damit!!!
+
+Bsp. Ausgabe des frontail:  
+https://github.com/DV-STUDIOS-DE/b2500-fronttail/blob/main/2025-06-22_04h01_06.png
