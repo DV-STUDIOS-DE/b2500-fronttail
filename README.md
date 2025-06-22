@@ -107,6 +107,11 @@ Inhalt, size auf gewünschte Größe anpassen, jedoch maximal 75% der Größe vo
     create 644 openhabian openhabian
 }
 ```
+Cronjob für logrotate alle 5 Minuten einrichten.
+```
+*/5 * * * * /usr/sbin/logrotate --state /home/openhabian/B2500/logrotate.state /home/openhabian/B2500/b2500debug-logrotate.conf
+```
+
 Nun wird die Datei /tmp/b2500debug.log nach 75MB gekappt.
 Es werden dabei maximal 5 alte Dateien gespeichert (rotate = 5)
 
