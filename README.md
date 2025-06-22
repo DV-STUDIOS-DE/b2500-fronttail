@@ -5,8 +5,8 @@ Das Debugfile wird dann über das Fronttail auf http://[adresse von openhab]:900
 Unter Advanced auf https://tomquist.github.io/esphome-b2500/ vor dem Bulid den loglevel auf Debug setzen um alle Log-Ausgaben des ESP zu erhalten.
 
 1. Die Datei events.sh nach /home/openhabian/B2500/events.sh kopieren und auf ausführbar setzen (chmod 775 events.sh)
-Die Ipadresse im Script anpassen:  SSE_URL="http://[adresse von openhab]/events"
-events.sh als service ausführen:  
+Die Ipadresse im Script anpassen:  SSE_URL="http://[adresse von openhab]/events"  
+Bashscript events.sh als service ausführen:  
 ```
 sudo nano /etc/systemd/system/frontail-B2500.service
 ```
