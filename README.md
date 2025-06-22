@@ -80,7 +80,7 @@ After=network.target
 
 [Service]
 User=openhabian
-ExecStart=/usr/bin/frontail --disable-usage-stats --ui-highlight --lines 2000 --number 200 --port 9002 --theme dark /tmp/b2500debug.log
+ExecStart=/usr/local/bin/frontail --disable-usage-stats --ui-highlight --lines 2000 --number 200 --port 9002 --theme dark /tmp/b2500debug.log
 Restart=always
 RestartSec=5
 
