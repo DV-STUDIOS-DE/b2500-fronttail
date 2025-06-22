@@ -6,7 +6,8 @@ Das Debugfile wird dann über das Fronttail auf http://[adresse von openhab]:900
 
 1. Die Datei events.sh als service ausführen:
 sudo nano /etc/systemd/system/frontail-B2500.service
-Inhalt: 
+Inhalt:
+```
 [Unit]
 Description=Events Script Service
 After=network.target
@@ -20,4 +21,4 @@ RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
-
+```
