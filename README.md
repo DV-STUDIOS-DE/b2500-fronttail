@@ -9,6 +9,7 @@ events.sh als service ausführen:
 ```
 sudo nano /etc/systemd/system/frontail-B2500.service
 ```
+Inhalt
 ```
 [Unit]
 Description=Events Script Service
