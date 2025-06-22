@@ -4,8 +4,11 @@
 Erstellt ein Logfile in /tmp für die Debugausgabe des B2500 ESP
 Das Debugfile wird dann über das Fronttail auf http://[adresse von openhab]:9002 angezeigt
 
-1. Die Datei events.sh als service ausführen:
+1. Die Datei events.sh in das Homeverzeichnis\B2500 kopieren
+   Als service ausführen:
+```
 sudo nano /etc/systemd/system/frontail-B2500.service
+```
 ```
 [Unit]
 Description=Events Script Service
@@ -25,5 +28,12 @@ Service neu laden und starten
 ```
 sudo systemctl daemon-reload
 sudo systemctl start events.service
-sudo systemctl enable events.service
+sudo systemctl enable frontail-B2500.service
 ```
+Check mit:
+```
+openhabian@openhabian:~ $ ls /tmp/b2500debug.log
+/tmp/b2500debug.log
+
+2. Fronttail auf Port 9002 einrichten
+  Damit der Inhalt der 
