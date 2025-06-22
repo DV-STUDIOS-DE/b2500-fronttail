@@ -109,6 +109,10 @@ Inhalt, size auf gewünschte Größe anpassen, jedoch maximal 75% der Größe vo
 ```
 Cronjob für logrotate alle 5 Minuten einrichten.
 ```
+crontab -e
+```
+Inhalt hinzufügen
+```
 */5 * * * * /usr/sbin/logrotate --state /home/openhabian/B2500/logrotate.state /home/openhabian/B2500/b2500debug-logrotate.conf
 ```
 
