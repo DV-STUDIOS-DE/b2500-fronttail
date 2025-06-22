@@ -1,5 +1,7 @@
 # b2500-fronttail für openhab
 
+https://github.com/DV-STUDIOS-DE/b2500-fronttail/blob/main/2025-06-22_04h01_06.png
+
 
 Erstellt ein Logfile in /tmp für die Debugausgabe des ESPHome B2500  
 Das Debugfile wird dann über das Fronttail auf http://[adresse von openhab]:9002 angezeigt.
